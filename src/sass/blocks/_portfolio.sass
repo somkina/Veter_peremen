@@ -1,0 +1,35 @@
+.portfolio
+  padding: 0
+  justify-content: center
+
+  &__arrows
+    max-width: 118px
+    margin: auto
+    margin-top: 68px
+    display: flex
+    justify-content: space-between
+.slider
+  max-width: 1190px
+  &__item
+    margin: auto
+  &__image
+    padding: 5px  
+
+@media (max-width: 768px)
+  .portfolio
+  .slider
+    max-width: 680px
+    &__image
+      margin: auto
+@media (max-width: 590px)
+  .portfolio
+    padding: 39px 0 60px
+    &__block
+      width: 94%
+      padding-left: 23px
+    &__arrows
+      margin-top: 50px
+  .slider
+    max-width: 680px
+    &__image
+      margin: auto      

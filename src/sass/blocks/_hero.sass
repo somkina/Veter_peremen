@@ -1,0 +1,53 @@
+.hero 
+  padding: 0 0 50px 0
+  background-color: 
+  
+  &-block 
+    display: block
+  &-text 
+    text-align: center
+    margin-top: 50px
+    &__title 
+      font-size: 41px
+      line-height: 55px
+      margin-bottom: 38px
+      +bold
+    &__subtitle 
+      display: inline-block
+      font-size: 20px
+      margin-bottom: 69px
+
+  &__button
+    display: block
+    margin: auto
+    +bold
+    margin-bottom: 50px
+
+
+
+@media (max-width: 768px) 
+  .hero 
+    &-text 
+      &__title 
+        font-size: 24px
+        line-height: 34px
+        margin-bottom: 15px
+      &__subtitle 
+        font-size: 17px
+        margin-bottom: 30px
+
+@media (max-width: 576px)
+  .hero 
+    padding: 23px 0 50px
+    &-block 
+      padding-top: 2px
+    &-text 
+      padding-left: 3px
+      padding-right: 0
+      &__title 
+        font-size: 24px
+        margin-bottom: 5px 
+        line-height: 31px
+      &__subtitle 
+        font-size: 16px 
+        padding-left: 3px                

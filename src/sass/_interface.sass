@@ -1,0 +1,56 @@
+*
+  box-sizing: border-box
+body 
+  +reg
+img 
+  max-width: 100%    
+.container
+  width: 1178px
+  margin: auto
+
+.button 
+  border-radius: 10px
+  background-color: 
+  border: none
+  padding: 20px 55px 
+  outline: none
+  +bold 
+  border: 1.5px solid grey
+  &:hover 
+    background-color: lighten(grey, 30%)
+    cursor: pointer 
+.section
+  padding-top: 74px
+  &-title
+    font-size: 24px
+    text-align: center 
+    +bold
+  &-subtitle
+    display: block 
+    font-size: 16px  
+.input 
+  border: 1px solid grey
+  padding: 23px 28px 
+  font-size: 15px
+  border-radius: 10px 
+  outline: none 
+.arrows 
+  &__left, &__right 
+    &:hover
+      cursor: pointer
+.success
+  +bold
+b
+  +bold    
+
+@media (max-width: 1200px)  
+  .container 
+    width: 760px
+@media (max-width: 768px)  
+  .container 
+    max-width: 540px
+    width: 90% 
+@media (max-width: 576px)  
+  .container 
+    max-width: 277px
+    width: 99%    
