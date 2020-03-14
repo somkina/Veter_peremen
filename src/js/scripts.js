@@ -1,17 +1,20 @@
 $(document).ready(function () {
-  
 
-  $('#brif-form').validate({
+  $('.show').click(function () {
+    $(this).toggleClass('active').next()[$(this).next().is(':hidden') ? "slideDown" : "slideUp"](400);
+  });
+
+
+
+  $('#selection-form').validate({
     rules: {
       name: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
-      email: {
-        required: true,
-        email: true
-      },
+      
+      
       phone: {
         required: true
       }
@@ -25,16 +28,12 @@ $(document).ready(function () {
       phone: {
         required: "Укажите ваш телефон"
       },
-      email: {
-        required: "Введите корректный email",
-        email: "Введите корректный email"
-      }
     },
     submitHandler: function (form) {
       $.ajax({
         url: 'mail.php',
         type: 'POST',
-        data: $("#brif-form").serialize(),
+        data: $("#selection-form").serialize(),
         success: function (data) {
           $('input').val('');
         }
@@ -44,7 +43,7 @@ $(document).ready(function () {
   /*маска для телефона*/
   $('.phone').mask('+7 (999) 999-99-99');
 
-  $('#offer-form').validate({
+  $('#form-form').validate({
     rules: {
       name: {
         required: true,
@@ -69,9 +68,9 @@ $(document).ready(function () {
       $.ajax({
         url: 'mail.php',
         type: 'POST',
-        data: $("#offer-form").serialize(),
+        data: $("#form-form").serialize(),
         success: function (data) {
-         
+
           $('input').val('');
         }
       });
@@ -102,14 +101,14 @@ $(document).ready(function () {
         type: 'POST',
         data: $("#modal-form").serialize(),
         success: function (data) {
-        
+
           $('input').val('');
         }
       });
     }
   });
-  
-  document.querySelector(".brif__button").addEventListener('click', function() {
+
+  document.querySelector(".selection__button").addEventListener('click', function () {
     swal({
       title: "Ваша заявка отправлена",
       confirmButtonColor: "#ffd200"
@@ -123,13 +122,16 @@ $(document).ready(function () {
     });
   });
 
-  document.querySelector(".offer__button").addEventListener('click', function () {
+  document.querySelector(".form__button").addEventListener('click', function () {
     swal({
       title: "Ваша заявка отправлена",
       confirmButtonColor: "#ffd200"
     });
   });
 
+
+  
+  
 });
 
 

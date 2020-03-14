@@ -5,10 +5,11 @@
     text-align: center
     margin: auto
     width: 100%
-    margin-bottom: 100px
+    margin-bottom: 50px
     border: 1px solid grey
+    background-color: #4DA9E3
   &-title
-    margin-bottom: 30px
+    margin-bottom: 20px
     margin-top: 50px
     font-size: 22px
     line-height: 33px
@@ -16,7 +17,7 @@
     color: black
   &-subtitle
     display: block  
-    margin-bottom: 50px
+    margin-bottom: 30px
     font-size: 16px 
   &__description
     margin: 50px
@@ -42,19 +43,100 @@
     max-width: 500px 
     margin: auto
     margin-bottom: 30px 
-  &-text
-    &__item
-      margin-bottom: 50px  
+ 
 
 #form-name-error
-  color: red 
+  color: #fff
   position: absolute
   top: 244px
   left: 340px
   font-size: 14px
 #form-phone-error
-  color: red 
+  color: #fff 
   position: absolute
   top: 323px
   left: 335px
   font-size: 14px
+
+@media (max-width: 1200px) 
+  .form
+    &-block
+      width: 90%
+      margin: 20px
+    &__input
+      margin-bottom: 9px
+    &__button
+      font-size: 18px                    
+    &-title     
+    font-size: 20px
+    margin-bottom: 15px
+    &-subtitle
+      margin-bottom: 30px 
+    &__description
+      font-size: 14px
+
+  #selection-name-error
+    top: 239px
+    left: 143px  
+  #selection-phone-error
+    top: 313px
+    left: 138px  
+        
+@media (max-width: 880px)  
+  .form
+    &-block
+      flex-direction: column   
+    &__form
+      margin-top: 50px  
+  #selection-name-error
+    top: 239px
+    left: 227px  
+  #selection-phone-error
+    top: 313px
+    left: 227px  
+       
+@media (max-width: 576px)  
+  .form
+    padding-top: 28px 
+    &__form
+      margin-top: 5px
+    &-title    
+      font-size: 18px
+      line-height: 25px
+      margin-bottom: 15px
+    &-subtitle
+        font-size: 14px
+        margin-bottom: 30px
+    &__description
+      font-size: 12px
+  
+    &__input
+      margin-bottom: 9px
+    &__button
+      margin-top: 0
+      font-size: 14px 
+      margin-bottom: 26px    
+                
+
+     
+  #selection-name-error
+    top: 200px
+    left: 91px  
+    font-size: 12px
+  #selection-phone-error
+    top: 275px
+    left: 80px  
+    font-size: 12px
+
+@media (max-width: 325px)
+  .form
+    &-title    
+      font-size: 14px  
+    &-subtitle
+      font-size: 12px  
+  #selection-name-error
+    top: 197px
+    left: 91px  
+  #selection-phone-error
+    top: 270px
+    left: 80px  

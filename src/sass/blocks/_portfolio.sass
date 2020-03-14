@@ -1,11 +1,10 @@
 .portfolio
-  padding: 0
+  padding: 100px 0 0
   justify-content: center
 
   &__arrows
     max-width: 118px
     margin: auto
-    margin-top: 68px
     display: flex
     justify-content: space-between
 .slider
@@ -13,7 +12,11 @@
   &__item
     margin: auto
   &__image
-    padding: 5px  
+    padding: 10px  
+
+@media (max-width: 1200px) 
+  .portfolio
+    padding: 50px 0 0   
 
 @media (max-width: 768px)
   .portfolio
@@ -23,7 +26,7 @@
       margin: auto
 @media (max-width: 590px)
   .portfolio
-    padding: 39px 0 60px
+    padding: 0
     &__block
       width: 94%
       padding-left: 23px
