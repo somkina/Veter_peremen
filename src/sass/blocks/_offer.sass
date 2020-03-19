@@ -1,15 +1,20 @@
 .offer
   background-image: url("../img/offer/image.png")
+  background-size: cover
+  background-repeat: no-repeat
   margin: 270px 0 0
   padding: 100px 0 50px
   background-color: 
   &-block
     text-align: center
     justify-content: center
-
+  &-text 
+    line-height: 1.5
+    
 
   &-title
     text-align: center
+    font-size: 24px
     margin: auto
     margin-bottom: 70px
   &-list
@@ -20,22 +25,27 @@
       font-size: 15px
       line-height: 2
       margin-top: 10px
+      color: #204256
+      +bold
     &__item  
       width: 100% 
       text-align: center
       margin-bottom: 30px
 .icon
-  width: 25px      
+  width: 30px   
+ul 
+  &:first-child   
+    padding-left: 0
 
 @media (max-width: 1200px)
   .offer
-    margin: 220px 0 0
     padding: 60px 0 50px
-
+    margin: 220px 0 0
   
 
 @media (max-width: 768px) 
   .offer
+    margin: 20px 0 0
     &-block 
       width: 100%
       padding-right: 0  
@@ -47,16 +57,17 @@
         font-size: 15px
         line-height: 2
         margin-top: 10px             
-@media (max-width: 576px)
+@media (max-width: 630px)
   .offer
+    margin: 0
     padding-top: 50px
     padding-bottom: 0 
     &-block 
-      max-width: 275px
+      
       margin: auto 
       padding-bottom: 21px
     &-title 
-      font-size: 18px
+      font-size: 24px
       line-height: 22px
       margin-bottom: 18px
       margin-right: 10px
@@ -69,4 +80,4 @@
         line-height: 2
         margin-top: 10px
   .icon
-    width: 15px
+    width: 20px

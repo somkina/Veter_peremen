@@ -17,7 +17,7 @@ $(document).ready(function () {
       
       phone: {
         required: true
-      }
+      },
     },
     messages: {
       name: {
@@ -26,7 +26,7 @@ $(document).ready(function () {
         maxlength: "Максимальное число символов: 15"
       },
       phone: {
-        required: "Укажите ваш телефон"
+        required: "Укажите телефон"
       },
     },
     submitHandler: function (form) {
@@ -61,8 +61,11 @@ $(document).ready(function () {
         maxlength: "Максимальное число символов: 15"
       },
       phone: {
-        required: "Укажите телефон"
-      }
+        required: "Укажите ваш телефон"
+      },
+      comment: {
+        required: "Ваш вопрос"
+      },
     },
     submitHandler: function (form) {
       $.ajax({
@@ -92,8 +95,8 @@ $(document).ready(function () {
         maxlength: "Максимальное число символов: 15"
       },
       phone: {
-        required: "Укажите телефон"
-      }
+        required: "Укажите ваш телефон"
+      },
     },
     submitHandler: function (form) {
       $.ajax({
@@ -101,9 +104,11 @@ $(document).ready(function () {
         type: 'POST',
         data: $("#modal-form").serialize(),
         success: function (data) {
-
+          
           $('input').val('');
-        }
+          $('.success').html(data + ',ваша форма отправлена'); 
+        },
+      
       });
     }
   });
